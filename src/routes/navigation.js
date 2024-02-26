@@ -16,7 +16,7 @@ function TabRoutes() {
       <Tab.Screen name='ListaPets' component={ListPets} />
       <Tab.Screen name='Mensagens' component={Message} />
     </Tab.Navigator>
-  )
+  );
 }
 
 export default function Navigation() {
@@ -32,6 +32,7 @@ export default function Navigation() {
           component={Home} />
         <Stack.Screen name='Login' component={Login} />
         <Stack.Screen name='Cadastro' component={Register} />
+        <Stack.Screen name='Tab' component={TabRoutes} />
       </Stack.Navigator>
     </NavigationContainer>
   );
