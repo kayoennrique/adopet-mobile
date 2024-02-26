@@ -1,4 +1,4 @@
-import { Image, StyleSheet, Text, View } from "react-native";
+import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import PageDefault from "../PageDefault";
 import { ScrollView } from "react-native-gesture-handler";
 

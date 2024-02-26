@@ -17,18 +17,53 @@ const Drawer = createDrawerNavigator();
 
 function DrawerRoutes() {
   return (
-    <Drawer.Navigator>
-      <Drawer.Screen
-        name='Perfil'
-        component={Profile}
-      />
+    <Drawer.Navigator
+      screenOptions={{
+        drawerStyle: {
+          backgroundColor: '#36D6AD'
+        },
+        drawerLabelStyle: {
+          color: '#FFF',
+          fontSize: 14,
+          fontFamily: 'PoppinsRegular',
+          fontWeight: '400',
+          lineHeight: 20
+        }
+      }}
+    >
       <Drawer.Screen
         name='Lista de Pets'
         component={TabRoutes}
+        options={{
+          drawerLabel: 'Pets para adoção',
+          drawerIcon: () => (<Image source={require('../assets/pets.png')} style={{ width: 20, height: 20 }}></Image>),
+          headerTransparent: true,
+          title: ''
+        }}
+      />
+      <Drawer.Screen
+        name='Perfil'
+        component={Profile}
+        options={{
+          drawerLabel: 'Perfil',
+          drawerIcon: () => (
+            <Image source={require('../assets/profile.png')} style={{ width: 20, height: 20, }} />
+          ),
+          headerTransparent: true,
+          title: ''
+        }}
       />
       <Drawer.Screen
         name='Sair'
         component={Home}
+        options={{
+          drawerLabel: 'Sair',
+          drawerIcon: () => (
+            <Image source={require('../assets/logout.png')} style={{ width: 20, height: 20 }} />
+          ),
+          headerTransparent: true,
+          title: ''
+        }}
       />
     </Drawer.Navigator>
   );
@@ -44,7 +79,7 @@ function TabRoutes() {
       <Tab.Screen name="Lista de Pets" component={ListPets}
         options={{
           tabBarIcon: () => (
-            <Image source={require('../assets/pets-green.png')} style={{ width: 24, height: 24 }}
+            <Image source={require('../assets/pets-green.png')} style={{ width: 20, height: 20 }}
             />
           )
         }}
@@ -52,7 +87,7 @@ function TabRoutes() {
       <Tab.Screen name="Mensagem" component={Message}
         options={{
           tabBarIcon: () => (
-            <Image source={require('../assets/mensagens.png')} style={{ width: 24, height: 24 }} />
+            <Image source={require('../assets/mensagens.png')} style={{ width: 20, height: 20 }} />
           )
         }}
       />
