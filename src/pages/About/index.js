@@ -14,11 +14,9 @@ export default function About({ navigation }) {
                     <View style={styles.contentContainer}>
                         <Image source={image} style={styles.image} />
                         <Text style={styles.text}>{name}</Text>
-
                         {
-                            description.information.map((item) => <Text style={styles.textList} key={uuid.v4()}>{item}</Text>)
+                            description.informations.map((item) => <Text style={styles.textList} key={uuid.v4()}>{item}</Text>)
                         }
-
                         <View style={styles.containerContact}>
                             <Text style={styles.local}>
                                 {locality}</Text>
@@ -46,20 +44,15 @@ export default function About({ navigation }) {
                                 </View>
                             </View>
                         </View>
-
                         <Text style={styles.textSummary}>{description.summary}</Text>
-
                         {
-                            description.fotos.map((item) => <Image source={item} key={uuid.v4()} style={styles.image} />)
+                            description.photos.map((item) => <Image source={item} key={uuid.v4()} style={styles.image} />)
                         }
                     </View>
-
-
                 </PageDefault>
             </ScrollView>
         </View >
-
-    )
+    );
 }
 
 const styles = StyleSheet.create({

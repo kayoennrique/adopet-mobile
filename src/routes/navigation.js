@@ -52,7 +52,7 @@ export default function Navigation() {
         <Stack.Screen name='Login' component={Login} />
         <Stack.Screen name='Cadastro' component={Register} />
         <Stack.Screen name='Tab' component={TabRoutes} />
-        <Stack.Screen name='Sobre' component={About} />
+        <Stack.Screen name='About' component={About} />
       </Stack.Navigator>
     </NavigationContainer>
   );
