@@ -2,15 +2,37 @@ import { Image } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { createDrawerNavigator } from "@react-navigation/drawer";
 import Home from "../pages/Home";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import ListPets from "../pages/ListPets";
 import Message from "../pages/Message";
 import About from "../pages/About";
+import Profile from "../pages/Profile";
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
+const Drawer = createDrawerNavigator();
+
+function DrawerRoutes() {
+  return (
+    <Drawer.Navigator>
+      <Drawer.Screen
+        name='Lista de Pets'
+        component={ListPets}
+      />
+      <Drawer.Screen
+        name='Perfil'
+        component={Profile}
+      />
+      <Drawer.Screen
+        name='Sair'
+        component={Home}
+      />
+    </Drawer.Navigator>
+  );
+}
 
 function TabRoutes() {
   return (
@@ -52,7 +74,7 @@ export default function Navigation() {
         <Stack.Screen name='Login' component={Login} />
         <Stack.Screen name='Cadastro' component={Register} />
         <Stack.Screen name='Tab' component={TabRoutes} />
-        <Stack.Screen name='About' component={About} />
+        <Stack.Screen name='Sobre' component={About} />
       </Stack.Navigator>
     </NavigationContainer>
   );

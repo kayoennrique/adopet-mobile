@@ -5,7 +5,7 @@ import { TouchableOpacity } from "react-native-gesture-handler";
 export default function Card({ name, age, size, image, characteristics, locality, description, navigation }) {
     return (
         <View style={styles.container}>
-            <TouchableOpacity onPress={() => navigation.navigate('About', {
+            <TouchableOpacity onPress={() => navigation.navigate('Sobre', {
                 name: name,
                 image: image,
                 locality: locality,
