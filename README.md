@@ -1,7 +1,7 @@
 ## Adopet
 A social network for adopters to find dogs or cats for adoption.
 
-<img src='https://github.com/MonicaHillman/3654-rotas-react-native/assets/51282495/4c479e79-de2b-4a7b-958e-c57bce1c1282' alt='application screenshot' width='150px'/ >
+<img src='https://github.com/MonicaHillman/3654-rotas-react-native/assets/51282495/4c479e79-de2b-4a7b-958e-c57bce1c1282' alt='application screenshot' width='150px'/>
 
 ## 🔨 Project Features
 In this part of the project we developed the application's navigation flow.
