@@ -19,12 +19,12 @@ function DrawerRoutes() {
   return (
     <Drawer.Navigator>
       <Drawer.Screen
-        name='Lista de Pets'
-        component={ListPets}
-      />
-      <Drawer.Screen
         name='Perfil'
         component={Profile}
+      />
+      <Drawer.Screen
+        name='Lista de Pets'
+        component={TabRoutes}
       />
       <Drawer.Screen
         name='Sair'
@@ -73,7 +73,7 @@ export default function Navigation() {
           component={Home} />
         <Stack.Screen name='Login' component={Login} />
         <Stack.Screen name='Cadastro' component={Register} />
-        <Stack.Screen name='Tab' component={TabRoutes} />
+        <Stack.Screen name='Drawer' component={DrawerRoutes} />
         <Stack.Screen name='Sobre' component={About} />
       </Stack.Navigator>
     </NavigationContainer>
