@@ -1,25 +1,25 @@
 import React from 'react';
 import { Image, StyleSheet, Text, View, Button, TouchableOpacity } from 'react-native';
 import PageDefault from '../PageDefault';
-export default function Home() {
+export default function Home({ navigation }) {
 
     return (
         <View style={styles.container}>
             <PageDefault>
                 <View style={styles.contentContainer}>
-                    <Image source={require('../../assets/Logo.png')} style={styles.imagem} />
+                    <Image source={require('../../assets/Logo.png')} style={styles.image} />
                     <Text style={[styles.text, styles.title]}>Boas-vindas!</Text>
                     <Text style={styles.text}>Que tal mudar sua vida adotando seu novo melhor amigo? Vem com a gente!</Text>
 
-                    <TouchableOpacity style={styles.button}>
-                        <Text style={styles.textoBotao}>Login</Text>
+                    <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Login')}>
+                        <Text style={styles.textButton}>Login</Text>
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={styles.button}>
-                        <Text style={styles.textoBotao}>Cadastro</Text>
+                    <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Cadastro')}>
+                        <Text style={styles.textButton}>Cadastro</Text>
                     </TouchableOpacity>
 
-                    <Image source={require('../../assets/CachorroEGato.png')} style={styles.imagem}></Image>
+                    <Image source={require('../../assets/CachorroEGato.png')} style={styles.image}></Image>
                 </View>
             </PageDefault>
         </View>
@@ -48,13 +48,13 @@ const styles = StyleSheet.create({
         paddingTop: 150,
         gap: 32,
     },
-    imagem: {
+    image: {
         alignSelf: 'center',
     },
 
     button: {
         borderRadius: 8,
-        backgroundColor: '#FC7071', // Pode ser ajustado conforme necessário
+        backgroundColor: '#FC7071',
         shadowColor: 'rgba(0, 0, 0, 0.12)',
         shadowOffset: {
             width: 2,
@@ -62,12 +62,12 @@ const styles = StyleSheet.create({
         },
         shadowOpacity: 1,
         shadowRadius: 4,
-        elevation: 4, // Adiciona a elevação para sombra no Android
-        padding: 10, // Pode ser ajustado conforme necessário
+        elevation: 4,
+        padding: 10,
         width: 200,
         alignSelf: 'center',
     },
-    textoBotao: {
+    textButton: {
         color: 'white',
         textAlign: 'center',
         fontSize: 16,
