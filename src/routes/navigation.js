@@ -1,9 +1,10 @@
+import { Image } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Home from "../pages/Home";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import ListPets from "../pages/ListPets";
 import Message from "../pages/Message";
 
@@ -12,9 +13,23 @@ const Tab = createBottomTabNavigator();
 
 function TabRoutes() {
   return (
-    <Tab.Navigator>
-      <Tab.Screen name='ListaPets' component={ListPets} />
-      <Tab.Screen name='Mensagens' component={Message} />
+    <Tab.Navigator
+      screenOptions={{
+        headerShown: false
+      }}
+    >
+      <Tab.Screen name="Lista de Pets" component={ListPets}
+        options={{
+          tabBarIcon: () => (
+            <Image source={require('../assets/pets-green.png')} style={{ width: 24, height: 24 }} />
+          )
+        }} />
+      <Tab.Screen name="Mensagem" component={Message}
+        options={{
+          tabBarIcon: () => (
+            <Image source={require('../assets/mensagens.png')} style={{ width: 24, height: 24 }} />
+          )
+        }} />
     </Tab.Navigator>
   );
 }

@@ -1,11 +1,8 @@
 import React from "react";
-import { StyleSheet, Text, View, TextInput, ScrollView } from "react-native";
-import { useRoute } from "@react-navigation/native";
+import { StyleSheet, Text, View, TextInput, ScrollView, TouchableOpacity } from "react-native";
 import PageDefault from "../PageDefault";
 
 export default function Message() {
-    const route = useRoute();
-    const { namePet } = route.params;
 
     const [name, onChangeName] = React.useState('');
     const [telephone, onChangePhone] = React.useState('');
@@ -44,7 +41,6 @@ export default function Message() {
                                 <Text style={styles.label}>Nome do animal</Text>
                                 <TextInput
                                     style={styles.input}
-                                    value={namePet}
                                 />
                             </View>
 
