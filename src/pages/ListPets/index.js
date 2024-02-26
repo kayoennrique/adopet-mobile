@@ -18,7 +18,7 @@ export default function ListPets({ navigation }) {
                 </View>
             </PageDefault>
         </View>
-    )
+    );
 }
 
 const styles = StyleSheet.create({

@@ -2,7 +2,8 @@ import { View, ScrollView, StyleSheet, Image, FlatList, Text } from "react-nativ
 import PageDefault from "../PageDefault";
 import { Link, useRoute } from "@react-navigation/native";
 import uuid from 'react-native-uuid';
-export default function Sobre({ navigation }) {
+
+export default function About({ navigation }) {
     const route = useRoute();
     const { name, image, description, locality } = route.params;
 

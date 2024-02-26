@@ -7,6 +7,7 @@ import Login from "../pages/Login";
 import Register from "../pages/Register";
 import ListPets from "../pages/ListPets";
 import Message from "../pages/Message";
+import About from "../pages/About";
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -21,15 +22,18 @@ function TabRoutes() {
       <Tab.Screen name="Lista de Pets" component={ListPets}
         options={{
           tabBarIcon: () => (
-            <Image source={require('../assets/pets-green.png')} style={{ width: 24, height: 24 }} />
+            <Image source={require('../assets/pets-green.png')} style={{ width: 24, height: 24 }}
+            />
           )
-        }} />
+        }}
+      />
       <Tab.Screen name="Mensagem" component={Message}
         options={{
           tabBarIcon: () => (
             <Image source={require('../assets/mensagens.png')} style={{ width: 24, height: 24 }} />
           )
-        }} />
+        }}
+      />
     </Tab.Navigator>
   );
 }
@@ -48,6 +52,7 @@ export default function Navigation() {
         <Stack.Screen name='Login' component={Login} />
         <Stack.Screen name='Cadastro' component={Register} />
         <Stack.Screen name='Tab' component={TabRoutes} />
+        <Stack.Screen name='Sobre' component={About} />
       </Stack.Navigator>
     </NavigationContainer>
   );

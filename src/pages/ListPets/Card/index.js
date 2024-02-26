@@ -9,8 +9,9 @@ export default function Card({ name, age, size, image, characteristics, locality
                 name: name,
                 image: image,
                 locality: locality,
-                description: description,
-            })}>
+                description: description
+            })}
+            >
                 <Image source={image} />
             </TouchableOpacity>
             <View style={styles.containerInformation}>
@@ -38,7 +39,7 @@ export default function Card({ name, age, size, image, characteristics, locality
                 </View>
             </View>
         </View>
-    )
+    );
 }
 
 const styles = StyleSheet.create({
